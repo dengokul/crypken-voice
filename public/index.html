@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crypken Voice Agent</title>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div><img src="https://crypken-bucket.s3.ap-southeast-1.amazonaws.com/website/images/crypken-logo.png" /></div>
+    <br /><br />
+    <div>
+      <header>
+        <h1 class="title">Crypken Voice Agent</h1> <br />
+        <button id="startup-button" class="btn">Call to Crypken Agent</button>
+      </header>
+      <main id="controls">
+
+        <section class="center-column">
+          <div id="call-controls" class="hide">
+            <h2 class="instructions title">Make a Call</h2>
+            <form class="makecall">
+              <label for="phone-number" class="title">Enter a phone number</label>
+              <input id="phone-number" type="text" placeholder="+15552221234" />
+              <button id="button-call" type="submit" class="btn">Call Now</button>
+            </form>
+            <button id="button-hangup-outgoing" class="hide">Hang Up</button>
+            <div id="incoming-call" class="hide">
+              <h2>Incoming Call Controls</h2>
+              <p class="instructions">
+                Incoming Call from <span id="incoming-number"></span>
+              </p>
+              <button id="button-accept-incoming">Accept</button>
+              <button id="button-reject-incoming">Reject</button>
+              <button id="button-hangup-incoming" class="hide">Hangup</button>
+            </div>
+            <div id="volume-indicators" class="hide">
+              <label>Mic Volume</label>
+              <div id="input-volume"></div>
+              <br /><br />
+              <label>Speaker Volume</label>
+              <div id="output-volume"></div>
+            </div>
+          </div>
+        </section>
+        <br /><br />
+
+        <!-- <section class="center-column" id="info">
+          <h2 class="title">Your Device Info</h2>
+          <div id="client-name"></div>
+          <div id="output-selection" class="hide">
+            <label class="title">Ringtone Devices</label>
+            <select id="ringtone-devices" multiple></select>
+            <label class="title">Speaker Devices</label>
+            <select id="speaker-devices" multiple></select>
+          </div>
+        </section> -->
+        <!-- <section class="right-column">
+        <h2 class="title">Event Log</h2>
+        <div class="hide" id="log"></div>
+      </section> -->
+      </main>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="twilio.min.js"></script>
+  <script src="quickstart.js"></script>
+</body>
+
+</html>
